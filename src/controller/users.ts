@@ -67,7 +67,8 @@ export const getAllUsers = async (req: Request, res: Response) => {
         return res.status(200).json(users)
     }
     catch (e) {
-        return res.sendStatus(400)
+
+        return res.status(400).send(e)
     }
 }
 
